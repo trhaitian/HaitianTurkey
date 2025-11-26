@@ -223,11 +223,10 @@ function useRevealOnScroll() {
   return [ref, visible];
 }
 
-
 export default function LandingPage() {
-  // ✅ Separate state for EACH card
+  const [bannerRef, bannerVisible] = useRevealOnScroll();
   const [cardsRef, cardsVisible] = useRevealOnScroll();
-const [footerRef, footerVisible] = useRevealOnScroll();
+  const [footerRef, footerVisible] = useRevealOnScroll();
 
   const [active1, setActive1] = useState(false);
   const [active2, setActive2] = useState(false);
@@ -251,7 +250,7 @@ const [footerRef, footerVisible] = useRevealOnScroll();
 
   return (
     <div className="container-fluid">
-      <Navbar bg="light" fixed="top" className="shadow-sm">
+      <Navbar bg="white" fixed="top" className="shadow-sm">
         <div
           className="d-flex align-items-center justify-content-between"
           style={{ width: "100%" }}
@@ -266,7 +265,32 @@ const [footerRef, footerVisible] = useRevealOnScroll();
           <img src={EventLogo} alt="Plast Logo" className="navbar-logo " />
         </div>
       </Navbar>
-      <div className="contianer page-content">
+      <div
+        ref={bannerRef}
+        className={`container reveal-section page-content ${
+          bannerVisible ? "show" : ""
+        }`}
+      >
+        <div className="row  border border-2 border-light rounded-5 p-3 p-lg-5" style={{backgroundColor:"#E8EEF6"}}>
+          <div className="col-12 ">
+            <p className="haitianColor text-center bannerSectionText1 m-0 p-0">
+              Tüyap Fuar ve Kongre Merkezi
+            </p>
+             <p className="haitianColor text-center bannerSectionText2 m-0 p-0 ">
+              {" "}
+              December 3 - 6, 2025
+            </p>
+            <p className="haitianColor text-center bannerSectionText3 m-0 p-0">
+              {" "}
+              HALL 8 NO 807
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="contianer m-auto mt-3 mt-lg-5"
+        style={{ width: "80%" }}
+      >
         <div className="row">
           <div className="col-12">
             <Carousel data-bs-theme="dark">
@@ -290,10 +314,12 @@ const [footerRef, footerVisible] = useRevealOnScroll();
         </div>
       </div>
 
-<div
-  ref={cardsRef}
-  className={`container mt-5 reveal-section ${cardsVisible ? "show" : ""}`}
->
+      <div
+        ref={cardsRef}
+        className={`container mt-5 pt-3 reveal-section ${
+          cardsVisible ? "show" : ""
+        }`}
+      >
         <div className="row">
           {/* CARD 1 */}
           <div className="col-lg-3">
@@ -302,8 +328,12 @@ const [footerRef, footerVisible] = useRevealOnScroll();
               {...createHandlers(setActive1)}
             >
               <div className="image-wrapper bg-light">
-                <img src={Mars} className="main-image" alt="machine" />
-                <img src={Product1} className="hover-image" alt="product" />
+                <img src={Mars} className="main-image" alt="Mars Machine" />
+                <img
+                  src={Product1}
+                  className="hover-image"
+                  alt="Mars Product Image"
+                />
               </div>
               <Card.Body>
                 <div className="content-default">
@@ -341,8 +371,8 @@ const [footerRef, footerVisible] = useRevealOnScroll();
               {...createHandlers(setActive2)}
             >
               <div className="image-wrapper bg-light">
-                <img src={ZEMachine} className="main-image" alt="machine" />
-                <img src={Product3} className="hover-image" alt="product" />
+                <img src={ZEMachine} className="main-image" alt="ZE Machine" />
+                <img src={Product3} className="hover-image" alt="ZE Product" />
               </div>
               <Card.Body>
                 <div className="content-default">
@@ -380,8 +410,16 @@ const [footerRef, footerVisible] = useRevealOnScroll();
               {...createHandlers(setActive3)}
             >
               <div className="image-wrapper bg-light">
-                <img src={Ma3800} className="main-image" alt="machine" />
-                <img src={Product2} className="hover-image" alt="product" />
+                <img
+                  src={Ma3800}
+                  className="main-image"
+                  alt="Ma 3800H/PRO Machine"
+                />
+                <img
+                  src={Product2}
+                  className="hover-image"
+                  alt="Ma 3800H/PRO Product"
+                />
               </div>
               <Card.Body>
                 <div className="content-default">
@@ -417,8 +455,8 @@ const [footerRef, footerVisible] = useRevealOnScroll();
               {...createHandlers(setActive4)}
             >
               <div className="image-wrapper bg-light">
-                <img src={Haitian} className="main-image" alt="machine" />
-                <img src={Robot} className="hover-image" alt="product" />
+                <img src={Haitian} className="main-image" alt="HA Machine" />
+                <img src={Robot} className="hover-image" alt="Robot" />
               </div>
               <Card.Body>
                 <div className="content-default">
@@ -446,10 +484,12 @@ const [footerRef, footerVisible] = useRevealOnScroll();
           </div>
         </div>
       </div>
-<div
-  ref={footerRef}
-  className={`footer-container mt-3 bg-light reveal-section ${footerVisible ? "show" : ""}`}
->
+      <div
+        ref={footerRef}
+        className={`footer-container mt-3 bg-light reveal-section ${
+          footerVisible ? "show" : ""
+        }`}
+      >
         <div className="container py-4">
           <div className="row align-items-center footer-row">
             {/* Logo */}
@@ -476,7 +516,7 @@ const [footerRef, footerVisible] = useRevealOnScroll();
             </div>
 
             {/* Website */}
-            <div className="col-12 col-lg-3 footer-item with-pipe">
+            <div className="col-12 col-lg-3 footer-item">
               <FontAwesomeIcon icon={faGlobe} />
               <a
                 href="https://www.haitian.com.tr/"
