@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/HaitianTurkey/static/css/main.f93fd539.css",
-    "main.js": "/HaitianTurkey/static/js/main.6fc74e68.js",
+    "main.css": "/HaitianTurkey/static/css/main.5d01b3e4.css",
+    "main.js": "/HaitianTurkey/static/js/main.5f05db69.js",
     "static/js/453.7f2d026c.chunk.js": "/HaitianTurkey/static/js/453.7f2d026c.chunk.js",
-    "static/media/EventImage2.png": "/HaitianTurkey/static/media/EventImage2.8442a2ecab2cbb63bff3.png",
-    "static/media/EventImage1.png": "/HaitianTurkey/static/media/EventImage1.2e7c4678cb620d092d9e.png",
+    "static/media/EventImage2.png": "/HaitianTurkey/static/media/EventImage2.491829a37af275a11818.png",
+    "static/media/EventImage1.png": "/HaitianTurkey/static/media/EventImage1.de12f1650be72dd1874d.png",
+    "static/media/ZEMachine.png": "/HaitianTurkey/static/media/ZEMachine.700ec2551e70db280871.png",
+    "static/media/MarsMachine.png": "/HaitianTurkey/static/media/MarsMachine.bf4e4bc2ef1f95fe8ced.png",
     "static/media/Haitian.png": "/HaitianTurkey/static/media/Haitian.78597aa813cbec195bad.png",
-    "static/media/MarsMachine.png": "/HaitianTurkey/static/media/MarsMachine.456d046c53aff59b2a43.png",
-    "static/media/Ma3800.png": "/HaitianTurkey/static/media/Ma3800.fdb7bfdf06b0d105e1f4.png",
+    "static/media/Ma3800.png": "/HaitianTurkey/static/media/Ma3800.9064af95a7f9f9eb2a5f.png",
     "static/media/Robot.png": "/HaitianTurkey/static/media/Robot.d9c3506d604f8e577f7e.png",
-    "static/media/ZEMachine.png": "/HaitianTurkey/static/media/ZEMachine.dcae933d39bd2aa33ab5.png",
-    "static/media/Product1.png": "/HaitianTurkey/static/media/Product1.f8522f43ac3e1c22ede3.png",
+    "static/media/Product1.png": "/HaitianTurkey/static/media/Product1.89214887c030a6ca309e.png",
     "static/media/Product2.png": "/HaitianTurkey/static/media/Product2.c8a2221660e42fc16603.png",
-    "static/media/Product3.png": "/HaitianTurkey/static/media/Product3.0d03382ac5e6969bbf57.png",
+    "static/media/Product3.png": "/HaitianTurkey/static/media/Product3.88bc95a53e0a6c4b66d6.png",
     "static/media/EventLogo.png": "/HaitianTurkey/static/media/EventLogo.67cfb5543091cbe11751.png",
     "static/media/HaitianTurkeylogo.png": "/HaitianTurkey/static/media/HaitianTurkeylogo.35d78816797a8d57be1e.png",
-    "static/media/logo.svg": "/HaitianTurkey/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/HaitianTurkey/index.html",
-    "main.f93fd539.css.map": "/HaitianTurkey/static/css/main.f93fd539.css.map",
-    "main.6fc74e68.js.map": "/HaitianTurkey/static/js/main.6fc74e68.js.map",
+    "main.5d01b3e4.css.map": "/HaitianTurkey/static/css/main.5d01b3e4.css.map",
+    "main.5f05db69.js.map": "/HaitianTurkey/static/js/main.5f05db69.js.map",
     "453.7f2d026c.chunk.js.map": "/HaitianTurkey/static/js/453.7f2d026c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f93fd539.css",
-    "static/js/main.6fc74e68.js"
+    "static/css/main.5d01b3e4.css",
+    "static/js/main.5f05db69.js"
   ]
 }
