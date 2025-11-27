@@ -347,7 +347,7 @@ export default function LandingPage() {
               </div>
               <Card.Body>
                 <div className="content-default">
-                  <Card.Title className="haitianColor cardTittleFont">MA 2100 V/H</Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">MA2100V/h</Card.Title>
                   <Card.Text>
                     <p className="m-0 p-0 haitianColor">Product: 0.5L Bowl</p>
                     <p className="m-0 p-0 haitianColor">
@@ -362,7 +362,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div className="content-hover">
-                  <Card.Title className="haitianColor cardTittleFont">MA 2100 V/H</Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">MA2100V/h</Card.Title>
                   <Card.Text>
                     <p className="m-0 p-0 haitianColor">Product: 0.5L Bowl</p>
                     <p className="m-0 p-0 haitianColor">
@@ -393,7 +393,7 @@ export default function LandingPage() {
               </div>
               <Card.Body>
                 <div className="content-default">
-                  <Card.Title className="haitianColor cardTittleFont">ZE 3000 F</Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">ZE3000F/1100h</Card.Title>
                   <Card.Text>
                     <p className="m-0 p-0 haitianColor">Product: 2L Bucket</p>
 
@@ -408,7 +408,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div className="content-hover">
-                  <Card.Title className="haitianColor cardTittleFont">ZE 3000 F</Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">ZE3000F/1100h</Card.Title>
                   <Card.Text>
                     <p className="m-0 p-0 haitianColor">Product: 2L Bucket</p>
 
