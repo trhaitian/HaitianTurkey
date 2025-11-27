@@ -250,7 +250,17 @@ export default function LandingPage() {
     },
   });
 
+  const styl = `
+  .card-body {
+    flex: 1 1 auto;
+    padding: 10px !important;
+    color: var(--bs-card-color);
+}
+  `
+
   return (
+    <>
+    <style>{styl}</style>
     <div className="container-fluid  d-flex flex-column min-vh-100">
       <Navbar bg="white" fixed="top" className="shadow-sm">
         <div
@@ -318,7 +328,7 @@ export default function LandingPage() {
 
       <div
         ref={cardsRef}
-        className={`container mt-5 pt-3 reveal-section ${
+        className={`container mt-4 mt-lg-5 pt-3 reveal-section ${
           cardsVisible ? "show" : ""
         }`}
       >
@@ -593,5 +603,6 @@ export default function LandingPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

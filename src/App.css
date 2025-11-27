@@ -404,6 +404,9 @@ div {
     font-size: 30px;
     font-weight: bold;
   }
+  .product-card {
+  min-height: 350px;
+}
 }
 
 /* Desktop Landscape */
@@ -429,6 +432,10 @@ div {
     font-size: 30px;
     font-weight: bold;
   }
+    .product-card {
+  min-height: 350px;
+}
+
 }
 
 /* ================= LARGE DESKTOP ================= */
@@ -456,6 +463,9 @@ div {
     font-size: 30px;
     font-weight: bold;
   }
+    .product-card {
+  min-height: 385px;
+}
 }
 
 /* Large Desktop Landscape */
@@ -481,6 +491,9 @@ div {
     font-size: 30px;
     font-weight: bold;
   }
+      .product-card {
+  min-height: 385px;
+}
 }
 
 /* ================= EXTRA LARGE / 4K ================= */
@@ -510,6 +523,9 @@ div {
     font-size: 50px;
     font-weight: bold;
   }
+      .product-card {
+  min-height: 385px;
+}
 }
 
 /* Extra Large Landscape */
@@ -535,6 +551,9 @@ div {
     font-size: 50px;
     font-weight: bold;
   }
+      .product-card {
+  min-height: 385px;
+}
 }
 
 @media (max-width: 768px) {
