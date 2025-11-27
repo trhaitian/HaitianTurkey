@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HaitianTurkey/static/css/main.7e529704.css",
-    "main.js": "/HaitianTurkey/static/js/main.a4d785d7.js",
+    "main.js": "/HaitianTurkey/static/js/main.417f54ed.js",
     "static/js/453.7f2d026c.chunk.js": "/HaitianTurkey/static/js/453.7f2d026c.chunk.js",
     "static/media/EventImage1.png": "/HaitianTurkey/static/media/EventImage1.88d58ef6e5b6379f0f11.png",
     "static/media/EventImage2.png": "/HaitianTurkey/static/media/EventImage2.e469a73525a65b41fb4c.png",
@@ -17,11 +17,11 @@
     "static/media/HaitianTurkeylogo.png": "/HaitianTurkey/static/media/HaitianTurkeylogo.35d78816797a8d57be1e.png",
     "index.html": "/HaitianTurkey/index.html",
     "main.7e529704.css.map": "/HaitianTurkey/static/css/main.7e529704.css.map",
-    "main.a4d785d7.js.map": "/HaitianTurkey/static/js/main.a4d785d7.js.map",
+    "main.417f54ed.js.map": "/HaitianTurkey/static/js/main.417f54ed.js.map",
     "453.7f2d026c.chunk.js.map": "/HaitianTurkey/static/js/453.7f2d026c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7e529704.css",
-    "static/js/main.a4d785d7.js"
+    "static/js/main.417f54ed.js"
   ]
 }
