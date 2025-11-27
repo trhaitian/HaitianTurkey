@@ -33,6 +33,9 @@ function useRevealOnScroll() {
 
 export default function Page1() {
   const navigate = useNavigate();
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, []);
   const [bannerRef, bannerVisible] = useRevealOnScroll();
   const [cardsRef, cardsVisible] = useRevealOnScroll();
   const [footerRef, footerVisible] = useRevealOnScroll();

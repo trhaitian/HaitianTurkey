@@ -234,7 +234,9 @@ export default function LandingPage() {
 
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const navigate = useNavigate();
-
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, []);
   // ✅ Reusable logic creator (same logic as your working card)
   const createHandlers = (setState) => ({
     onMouseEnter: () => {
