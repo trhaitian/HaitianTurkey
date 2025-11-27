@@ -184,21 +184,20 @@ import React, { useState, useEffect, useRef } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
+import { Button } from "antd";
 import HaitianLogo from "./Images/HaitianTurkeylogo.png";
 import EventLogo from "./Images/EventLogo.png";
 import Event1 from "./Images/EventImage1.png";
 import Event2 from "./Images/EventImage2.png";
 import ZEMachine from "./Images/ZEMachine.png";
-import Product3 from "./Images/Product3.png";
 import Ma3800 from "./Images/Ma3800.png";
-import Product2 from "./Images/Product2.png";
 import Mars from "./Images/MarsMachine.png";
-import Product1 from "./Images/Product1.png";
 import Haitian from "./Images/Haitian.png";
 import Robot from "./Images/Robot.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faGlobe, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
+import { useNavigate } from "react-router-dom";
 
 function useRevealOnScroll() {
   const ref = useRef(null);
@@ -234,6 +233,7 @@ export default function LandingPage() {
   const [active4, setActive4] = useState(false);
 
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const navigate = useNavigate();
 
   // ✅ Reusable logic creator (same logic as your working card)
   const createHandlers = (setState) => ({
@@ -249,7 +249,7 @@ export default function LandingPage() {
   });
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid  d-flex flex-column min-vh-100">
       <Navbar bg="white" fixed="top" className="shadow-sm">
         <div
           className="d-flex align-items-center justify-content-between"
@@ -262,7 +262,7 @@ export default function LandingPage() {
             onClick={() => window.open("https://www.haitian.com.tr/", "_blank")}
           />
 
-          <img src={EventLogo} alt="Plast Logo" className="navbar-logo " />
+          <img src={EventLogo} alt="Plast Event Logo" className="navbar-logo " />
         </div>
       </Navbar>
       <div
@@ -271,12 +271,15 @@ export default function LandingPage() {
           bannerVisible ? "show" : ""
         }`}
       >
-        <div className="row  border border-2 border-light rounded-5 p-3 p-lg-5" style={{backgroundColor:"#E8EEF6"}}>
+        <div
+          className="row  border border-2 border-light rounded-5 p-3 p-lg-5"
+          style={{ backgroundColor: "#E8EEF6" }}
+        >
           <div className="col-12 ">
             <p className="haitianColor text-center bannerSectionText1 m-0 p-0">
               Tüyap Fuar ve Kongre Merkezi
             </p>
-             <p className="haitianColor text-center bannerSectionText2 m-0 p-0 ">
+            <p className="haitianColor text-center bannerSectionText2 m-0 p-0 ">
               {" "}
               December 3 - 6, 2025
             </p>
@@ -287,10 +290,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <div
-        className="contianer m-auto mt-3 mt-lg-5"
-        style={{ width: "80%" }}
-      >
+      <div className="contianer m-auto mt-3 mt-lg-5" style={{ width: "80%" }}>
         <div className="row">
           <div className="col-12">
             <Carousel data-bs-theme="dark">
@@ -324,41 +324,44 @@ export default function LandingPage() {
           {/* CARD 1 */}
           <div className="col-lg-3">
             <Card
-              className={`product-card p-1  ${active1 ? "active" : ""}`}
+              className={`product-card p-1 border border-1 border-muted ${
+                active1 ? "active" : ""
+              }`}
               {...createHandlers(setActive1)}
             >
               <div className="image-wrapper bg-light">
-                <img src={Mars} className="main-image" alt="Mars Machine" />
-                <img
-                  src={Product1}
-                  className="hover-image"
-                  alt="Mars Product Image"
-                />
+                <img src={Mars} className="main-image" alt="MA-2100-V/H machine image" />
+                <img src={Robot} className="hover-image" alt="Robot image" />
               </div>
               <Card.Body>
                 <div className="content-default">
-                  <Card.Title className="haitianColor">
-                    HAITIANMA2100V/h
-                  </Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">MA 2100 V/H</Card.Title>
                   <Card.Text>
-                    <p className="m-0 p-0 haitianColor">4cavity</p>
+                    <p className="m-0 p-0 haitianColor">Product: 0.5L Bowl</p>
                     <p className="m-0 p-0 haitianColor">
-                      robot is V1100-GD high speed series
+                      Robot: V1100 GD High Speed
                     </p>
-                    <p className="m-0 p-0 haitianColor">cycle speed 11s</p>
                   </Card.Text>
+                  <div className="btn-wrapper">
+                    <Button className="haitianColorButton" size="large" onClick={() => navigate("/MA-2100-VH-product")}>
+                      
+                      <span className="learnMoreFont">Learn More</span>
+                    </Button>
+                  </div>
                 </div>
                 <div className="content-hover">
-                  <Card.Title className="haitianColor">
-                    4 cavity Bowl
-                  </Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">MA 2100 V/H</Card.Title>
                   <Card.Text>
-                    <p className="m-0 p-0 haitianColor">4 cavity</p>
+                    <p className="m-0 p-0 haitianColor">Product: 0.5L Bowl</p>
                     <p className="m-0 p-0 haitianColor">
-                      robot is V1100-GD high speed series
+                      Robot: V1100 GD High Speed
                     </p>
-                    <p className="m-0 p-0 haitianColor">cycle speed 11s</p>
                   </Card.Text>
+                  <div className="btn-wrapper">
+                    <Button className="haitianColorButton " size="large" onClick={() => navigate("/MA-2100-VH-product")}>
+                      <span className="learnMoreFont">Learn More</span>
+                    </Button>
+                  </div>
                 </div>
               </Card.Body>
             </Card>
@@ -367,37 +370,45 @@ export default function LandingPage() {
           {/* CARD 2 */}
           <div className="col-lg-3 mt-3 mt-lg-0">
             <Card
-              className={`product-card p-1  ${active2 ? "active" : ""}`}
+              className={`product-card p-1  border border-1 border-muted ${
+                active2 ? "active" : ""
+              }`}
               {...createHandlers(setActive2)}
             >
               <div className="image-wrapper bg-light">
-                <img src={ZEMachine} className="main-image" alt="ZE Machine" />
-                <img src={Product3} className="hover-image" alt="ZE Product" />
+                <img src={ZEMachine} className="main-image" alt="ZE-3000-F machine image" />
+                <img src={Robot} className="hover-image" alt="Robot image" />
               </div>
               <Card.Body>
                 <div className="content-default">
-                  <Card.Title className="haitianColor">
-                    ZE3000F machine
-                  </Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">ZE 3000 F</Card.Title>
                   <Card.Text>
-                    <p className="m-0 p-0 haitianColor">
-                      V1300GD high speed series robot
-                    </p>
+                    <p className="m-0 p-0 haitianColor">Product: 2L Bucket</p>
 
-                    <p className="m-0 p-0 haitianColor">cycle speed 5.8s</p>
+                    <p className="m-0 p-0 haitianColor">
+                      Robot: V1300 GD High Speed
+                    </p>
                   </Card.Text>
+                   <div className="btn-wrapper">
+                    <Button className="haitianColorButton" size="large" onClick={() => navigate("/ZEF3000-1100h-product")}>
+                      <span className="learnMoreFont">Learn More</span>
+                    </Button>
+                  </div>
                 </div>
                 <div className="content-hover">
-                  <Card.Title className="haitianColor">Container</Card.Title>
+                  <Card.Title className="haitianColor cardTittleFont">ZE 3000 F</Card.Title>
                   <Card.Text>
-                    <p className="m-0 p-0 haitianColor">2 cavity</p>
+                    <p className="m-0 p-0 haitianColor">Product: 2L Bucket</p>
 
                     <p className="m-0 p-0 haitianColor">
-                      V1300GD high speed series robot
+                      Robot: V1300 GD High Speed
                     </p>
-
-                    <p className="m-0 p-0 haitianColor">cycle speed 5.8s</p>
                   </Card.Text>
+                  <div className="btn-wrapper">
+                    <Button className="haitianColorButton" size="large" onClick={() => navigate("/ZEF3000-1100h-product")}>
+                      <span className="learnMoreFont">Learn More</span>
+                    </Button>
+                  </div>
                 </div>
               </Card.Body>
             </Card>
@@ -406,67 +417,78 @@ export default function LandingPage() {
           {/* CARD 3 */}
           <div className="col-lg-3 mt-3 mt-lg-0">
             <Card
-              className={`product-card p-1  ${active3 ? "active" : ""}`}
+              className={`product-card p-1 border border-1 border-muted ${
+                active3 ? "active" : ""
+              }`}
               {...createHandlers(setActive3)}
             >
               <div className="image-wrapper bg-light">
                 <img
                   src={Ma3800}
                   className="main-image"
-                  alt="Ma 3800H/PRO Machine"
+                  alt="Ma-3800H/PRO machine image"
                 />
-                <img
-                  src={Product2}
-                  className="hover-image"
-                  alt="Ma 3800H/PRO Product"
-                />
+                <img src={Robot} className="hover-image" alt="Robot image" />
               </div>
               <Card.Body>
                 <div className="content-default">
-                  <Card.Title className="haitianColor">MA3800H/PRO</Card.Title>
-                  <Card.Text>
-                    <p className="m-0 p-0 haitianColor">4 cavity</p>
-                    <p className="m-0 p-0 haitianColor">
-                      robot is V1100-GD high speed series
-                    </p>
-                    <p className="m-0 p-0 haitianColor">cycle speed 11s</p>
-                  </Card.Text>
-                </div>
-                <div className="content-hover">
-                  <Card.Title className="haitianColor">
-                    Container Cap
+                  <Card.Title className="haitianColor cardTittleFont">
+                    MA 3800 H/PRO{" "}
                   </Card.Title>
                   <Card.Text>
-                    <p className="m-0 p-0 haitianColor">4 cavity</p>
                     <p className="m-0 p-0 haitianColor">
-                      robot is V1100-GD high speed series
+                      Product: 1L Bucket Cap
                     </p>
-                    <p className="m-0 p-0 haitianColor">cycle speed 11s</p>
+                    <p className="m-0 p-0 haitianColor">
+                      Robot: V 1300GD High Speed
+                    </p>
                   </Card.Text>
+                  <div className="btn-wrapper">
+                    <Button className="haitianColorButton" size="large" onClick={() => navigate("/MA3800H-PRO-product")}>
+                      <span className="learnMoreFont">Learn More</span>
+                    </Button>
+                  </div>
+                </div>
+                <div className="content-hover">
+                  <Card.Title className="haitianColor cardTittleFont">
+                    MA 3800 H/PRO{" "}
+                  </Card.Title>
+                  <Card.Text>
+                    <p className="m-0 p-0 haitianColor">
+                      Product: 1L Bucket Cap
+                    </p>
+                    <p className="m-0 p-0 haitianColor">
+                      Robot: V 1300GD High Speed
+                    </p>
+                  </Card.Text>
+                   <div className="btn-wrapper">
+                    <Button className="haitianColorButton" size="large" onClick={() => navigate("/MA3800H-PRO-product")}>
+                      <span className="learnMoreFont">Learn More</span>
+                    </Button>
+                  </div>
                 </div>
               </Card.Body>
             </Card>
           </div>
 
           {/* CARD 4 */}
-          <div className="col-lg-3 mt-3 mt-lg-0 p5">
+          {/* <div className="col-lg-3 mt-3 mt-lg-0 p5">
             <Card
-              className={`product-card p-1  ${active4 ? "active" : ""}`}
+              className={`product-card p-1 border border-2 border-muted ${
+                active4 ? "active" : ""
+              }`}
               {...createHandlers(setActive4)}
             >
               <div className="image-wrapper bg-light">
-                <img src={Haitian} className="main-image" alt="HA Machine" />
-                <img src={Robot} className="hover-image" alt="Robot" />
+                <img src={Haitian} className="main-image" alt="Crusher" />
+                 <img src={Haitian} className="hover-image" alt="Crusher" />
               </div>
               <Card.Body>
                 <div className="content-default">
                   <Card.Title className="haitianColor">Crusher</Card.Title>
                   <Card.Text>
-                    <p className="m-0 p-0 haitianColor">HAITIAN MA2100 V/h</p>
-                    <p className="m-0 p-0 haitianColor">4cavity</p>
-                    <p className="m-0 p-0 haitianColor">
-                      robot is V1100-GD high speed series
-                    </p>
+                    <p className="m-0 p-0 haitianColor">Model: HTSS300/W</p>
+                   
                   </Card.Text>
                 </div>
                 <div className="content-hover">
@@ -481,9 +503,30 @@ export default function LandingPage() {
                 </div>
               </Card.Body>
             </Card>
+          </div> */}
+
+           <div className="col-lg-3 mt-3 mt-lg-0 p5">
+            <Card
+              className={`product-card p-1 border border-1 border-muted `}
+            >
+              <div className="image-wrapper bg-light">
+                <img src={Haitian} className="main-image" alt="Crusher image" />
+              </div>
+              <Card.Body>
+                <div className="content-default">
+                  <Card.Title className="haitianColor cardTittleFont">Crusher</Card.Title>
+                  <Card.Text>
+                    <p className="m-0 p-0 haitianColor">Model: HTSS300/W</p>
+                   
+                  </Card.Text>
+                </div>
+              
+              </Card.Body>
+            </Card>
           </div>
         </div>
       </div>
+
       <div
         ref={footerRef}
         className={`footer-container mt-3 bg-light reveal-section ${
