@@ -162,8 +162,12 @@ export default function LandingPage() {
                   />
                 </Carousel.Item>
               </Carousel> */}
-              
-              <Carousel className="flip-carousel" interval={3000} data-bs-theme="dark">
+
+              <Carousel
+                className="flip-carousel"
+                interval={3000}
+                data-bs-theme="dark"
+              >
                 <Carousel.Item>
                   <img
                     className="d-block w-100 carousel-img"
